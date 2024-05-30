@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="css/calen.css">
+</head>
+
+<body>
+    <h1>Pulce un Evento</h1>
+    <div class="view-selectors">
+        
+        <button onclick="showMonthlyView()">Mensual</button>
+        <button onclick="showYearlyView()">Anual</button>
+        <button onclick="showDailyView()">Diario</button>
+    </div>
+
+    <div class="calendar-container">
+        
+        <div class="calendar-header">
+            <button onclick="prev()">Anterior</button>
+            <h2 id="calendar-title"></h2>
+            <button onclick="next()">Siguiente</button>
+        </div>
+        <div id="calendar-body" class="calendar-days"></div>
+    </div>
+
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Agregar Evento</h3>
+            <input type="date" id="event-date">
+            <select id="event-time">
+            </select>
+            <input type="text" id="event-description" placeholder="Descripción del Evento">
+            <textarea id="event-participants" placeholder="Nombres de los participantes"></textarea>
+            <button onclick="saveEvent()">Guardar</button>
+            <button onclick="deleteEvent()">Eliminar</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="js/calendario.js"></script>
+</body>
+
+</html>
